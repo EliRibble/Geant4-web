@@ -1,26 +1,15 @@
 /**
  * @author Christian Lambert
  */
-'use strict';
 
-/* Controllers */
-
-function MaterialCtrl($scope) {
-  $scope.materials = [
-    {"name": "Aluminum",
-    "value": "Aluminium"
-     },
-    {"name": "Lead",
-    "value": "matPb"
-     },
-    {"name": "Water",
-    "value": "matH2O"
-     },
-    {"name": "Kevlar",
-    "value": "kevlar"
-     },
-    
-  ];
-
-  $scope.orderProp = 'name';
-}
+$(document).ready(function() {
+	var numLayers = 3;
+	if(numLayers > 3) {
+		$('#remove').remove();
+	} else if (numLayers >= 30) {
+		$('#new layer').remove();
+	}
+	$('#new layer').onClick(function() {
+		// add a new layer without reloading the site
+	});
+});

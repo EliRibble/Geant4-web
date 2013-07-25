@@ -7,6 +7,9 @@
 
 function MaterialCtrl($scope) {
   $scope.materials = [
+    {"name": "None",
+    "value": "none"
+     },
     {"name": "Aluminum",
     "value": "Aluminium"
      },

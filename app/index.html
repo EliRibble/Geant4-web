@@ -12,6 +12,7 @@
 		<meta name="author" content="Christian Lambert" />
 		<script src="lib/angular/angular.js"></script>
 		<script src="js/layers.js"></script>
+		
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
 		
@@ -21,16 +22,47 @@
 		<div>
 			<header>
 				<h1>Geant4 Web Interface</h1>
+				<br />
+				<a href="about.html" >About</a>
 			</header>
 			<div>
 				<table>					
-					<ol>
-					<label>Pick a material</label>
-					<select>
-						<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
-					</select>
-					</ol>
+					
+						<!--<td> --> Layer 1
+							<label>Pick a material</label>
+							<select>
+								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
+							</select>
+						<!--</td>-->
+						<td>
+							Thickness:
+							<input type="text" />
+							<select>
+								<option value="km">km</option>
+								<option value="m">m</option>
+								<option value="cm">cm</option>
+								<option value="mm">mm</option>
+							</select>
+						</td>
+						<col />
+						<td>
+							Layer 2
+							<label>Pick a material</label>
+							<select>
+								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
+							</select>
+						</td>
+						<col />
+						<td>
+							Layer 3
+							<label>Pick a material</label>
+							<select>
+								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
+							</select>
+						</td>
+					
 				</table>
+				<button id='new layer'>Add a layer</button>
 			</div>
 			<footer>
 				
