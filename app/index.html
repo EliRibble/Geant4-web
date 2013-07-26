@@ -10,6 +10,7 @@
 		<script src="js/jquery-1.10.1.js"></script>
 		<script src="js/layers.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" /> 
 
 		
 	</head>
@@ -23,7 +24,7 @@
 			</header>
 			<div>
 				<table>					
-					
+					<tr>
 						<td> Layer 1
 							<label>Pick a material</label>
 							<select>
@@ -40,7 +41,8 @@
 								<option value="mm">mm</option>
 							</select>
 						</td>
-						<col />
+						</tr>
+						<tr>
 						<td> Layer 2
 							<label>Pick a material</label>
 							<select>
@@ -57,7 +59,8 @@
 								<option value="mm">mm</option>
 							</select>
 						</td>
-						<col />
+						</tr>
+						<tr>
 						<td> Layer 3
 							<label>Pick a material</label>
 							<select>
@@ -74,7 +77,7 @@
 								<option value="mm">mm</option>
 							</select>
 						</td>
-					
+					</tr>
 				</table>
 				<button id='add'ng-click='addLayer()'>Add a layer</button>
 				<button id='remove' ng-click='removeLayer()'>Remove a layer</button>
