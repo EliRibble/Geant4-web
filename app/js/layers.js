@@ -12,4 +12,7 @@ $(document).ready(function() {
 	$('#new layer').onClick(function() {
 		// add a new layer without reloading the site
 	});
+	$('#remove').onClick(function() {
+		
+	});
 });

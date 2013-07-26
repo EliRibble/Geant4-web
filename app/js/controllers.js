@@ -7,7 +7,7 @@
 
 function MaterialCtrl($scope) {
   $scope.materials = [
-    {"name": "None",
+    {"name": " None",
     "value": "none"
      },
     {"name": "Aluminum",
@@ -26,4 +26,16 @@ function MaterialCtrl($scope) {
   ];
 
   $scope.orderProp = 'name';
+}
+function LayerCtrl($scope) {
+	$scope.layer = 3;
+	$scope.numLayers = [1,2,3];
+	
+	if ($('#new layer').onClick() == true && layer <= 29) {
+		layer++;
+		if (layer > numLayers.length()) {
+			numLayers.push(layer);
+			
+		}
+	}
 }
