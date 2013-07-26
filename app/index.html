@@ -46,8 +46,7 @@
 							</select>
 						</td>
 						<col />
-						<td>
-							Layer 2
+						<td> Layer 2
 							<label>Pick a material</label>
 							<select>
 								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
@@ -73,6 +72,7 @@
 						<td>
 							Thickness:
 							<input type="text" ng-model="{number}" required ng-change="{}"/>
+							<select>
 								<option value="cm">cm</option>
 								<option value="km">km</option>
 								<option value="m">m</option>
