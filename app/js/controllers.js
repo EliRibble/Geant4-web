@@ -27,7 +27,7 @@ function MaterialCtrl($scope) {
 
   $scope.orderProp = 'name';
 }
-function LayerCtrl($scope) {
+/*  function LayerCtrl($scope) {
 	$scope.layer = 3;
 	$scope.numLayers = [1,2,3];
 	
@@ -39,3 +39,4 @@ function LayerCtrl($scope) {
 		}
 	}
 }
+*/
