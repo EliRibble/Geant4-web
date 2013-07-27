@@ -11,11 +11,10 @@
 		<script src="js/layers.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/app.css" /> 
-
 		
 	</head>
 
-	<body ng-controller="MaterialCtrl">
+	<body ng-controller="InputCtrl">
 		<div>
 			<header>
 				<h1>Geant4 Web Interface</h1>
@@ -23,67 +22,34 @@
 				<a href="about.html" >About</a>
 			</header>
 			<div>
-				<table>					
-					<tr>
-						<td> Layer 1
-							<label>Pick a material</label>
-							<select>
-								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
-							</select>
-						</td>
-						<td>
-							Thickness:
-							<input type="text" ng-model="{number}" required ng-change="{}"/>
-							<select>
-								<option value="cm">cm</option>
-								<option value="km">km</option>
-								<option value="m">m</option>
-								<option value="mm">mm</option>
-							</select>
-						</td>
+				<table id="layers">
+					<tbody>					
+						<tr ng-repeat="layer in layers">
+							<td> Layer {{layerNum.value}}
+								<label>Pick a material</label>
+								<select>
+									<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
+								</select>
+							</td>
+							<td>
+								Thickness:
+								<input type="text" ng-model="{number}" required ng-change="{}"/>
+								<select>
+									<option value="cm">cm</option>
+									<option value="km">km</option>
+									<option value="m">m</option>
+									<option value="mm">mm</option>
+								</select>
+							</td>
 						</tr>
-						<tr>
-						<td> Layer 2
-							<label>Pick a material</label>
-							<select>
-								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
-							</select>
-						</td>
-						<td>
-							Thickness:
-							<input type="text" ng-model="{number}" required ng-change="{}"/>
-							<select>
-								<option value="cm">cm</option>
-								<option value="km">km</option>
-								<option value="m">m</option>
-								<option value="mm">mm</option>
-							</select>
-						</td>
-						</tr>
-						<tr>
-						<td> Layer 3
-							<label>Pick a material</label>
-							<select>
-								<option ng-repeat="material in materials | orderBy:orderProp" value="{{material.value}}">{{material.name}}</option>
-							</select>
-						</td>
-						<td>
-							Thickness:
-							<input type="text" ng-model="{number}" required ng-change="{}"/>
-							<select>
-								<option value="cm">cm</option>
-								<option value="km">km</option>
-								<option value="m">m</option>
-								<option value="mm">mm</option>
-							</select>
-						</td>
-					</tr>
+					</tbody>			
 				</table>
-				<button id='add'ng-click='addLayer()'>Add a layer</button>
+				<button id='add' ng-click='addLayer()'>Add a layer</button>
 				<button id='remove' ng-click='removeLayer()'>Remove a layer</button>
 				<br />
 				<button id='submit' ng-click='sumbit()'>Submit</button>
 			</div>
+			
 			<footer>
 				
 			</footer>

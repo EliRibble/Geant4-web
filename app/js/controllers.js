@@ -5,7 +5,11 @@
 
 /* Controllers */
 
-function MaterialCtrl($scope) {
+function InputCtrl($scope) {
+	var numLayers = 1;
+  $scope.layers = [
+  	{"layerNum": "1"}
+  ];	
   $scope.materials = [
     {"name": " None",
     "value": "none"
@@ -21,9 +25,15 @@ function MaterialCtrl($scope) {
      },
     {"name": "Kevlar",
     "value": "kevlar"
-     },
+     }
     
   ];
+  $scope.addLayer = function() {
+  	numLayers++;
+  	layers.append({"layerNum" : toString(numLayers)});
+  	return numLayers;
+	)
+  }
 
   $scope.orderProp = 'name';
 }
