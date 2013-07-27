@@ -6,9 +6,8 @@
 /* Controllers */
 
 function InputCtrl($scope) {
-	var numLayers = 1;
-  $scope.layers = [
-  	{"layerNum": "1"}
+	$scope.layers = [
+  	1
   ];	
   $scope.materials = [
     {"name": " None",
@@ -29,10 +28,10 @@ function InputCtrl($scope) {
     
   ];
   $scope.addLayer = function() {
-  	numLayers++;
-  	layers.append({"layerNum" : toString(numLayers)});
-  	return numLayers;
-	)
+  	var numLayers = this.layers.length
+  	numLayers += 1;
+  	this.layers.push(numLayers);
+  	)
   }
 
   $scope.orderProp = 'name';
