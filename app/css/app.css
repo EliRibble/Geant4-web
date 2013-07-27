@@ -14,3 +14,12 @@ body
 {
 	background-color: #F2F2F2;
 }
+button {
+	position:relative;
+	width:120px;
+	height:20px;
+}
+#submit {
+	position: relative;
+	top:25px;	left: -185px;
+}
