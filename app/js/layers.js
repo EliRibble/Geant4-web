@@ -1,6 +1,6 @@
 /**
  * @author Christian Lambert
- */
+ 
 
 $(document).ready(function() {
 	var numLayers = 3;
@@ -20,3 +20,4 @@ $(document).ready(function() {
 		$('table')
 	});
 });
+*/
