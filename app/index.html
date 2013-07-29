@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/app.css" /> 
 	</head>
-	<body>
+	<body ng-controller="InputCtrl">
 		<div>
 			<header>
 				<h1>Geant4 Web Interface</h1>
@@ -19,7 +19,7 @@
 				<a href="about.html" >About</a>
 			</header>
 			<div>
-				<table ng-controller="InputCtrl">
+				<table>
 					<tbody>					
 						<tr ng-repeat="layer in numLayers">
 							<td> Layer {{layer}}
@@ -41,9 +41,9 @@
 						</tr>
 					</tbody>			
 				</table>
-				<button id='add' ng-click='addLayer()'>Add a layer</button>
-				<button id='remove' ng-click='removeLayer()'>Remove a layer</button>
-				<button id='submit' ng-click='sumbit()'>Submit</button>
+				<button ng-click='addLayer()'>Add a layer</button>
+				<button ng-click='removeLayer()'>Remove a layer</button>
+				<button id='submit'>Submit</button>
 			</div>
 			
 			<footer>
